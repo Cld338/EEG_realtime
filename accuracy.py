@@ -27,9 +27,6 @@ def model():
     # 데이터와 레이블 분리
     X = df.drop('label', axis=1)
     y = df['label']
-
-    # 데이터 분할
-    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     # # SVM 모델 생성 및 학습
     svm_model = SVC(kernel='linear', C=1.0, random_state=100, probability=True)
     svm_model.fit(X, y)
