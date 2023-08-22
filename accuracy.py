@@ -69,7 +69,7 @@ def classify(data):
     print(probability)
     predict_idx = probability.index(max(probability))
     print(["left", "right", "tongue", "foot"][predict_idx])
-    print(svm_model.predict(LDA_left), "!!!!!!!")
+    print(svm_model.predict(LDA_left))
 
 def random_sequence():
     seq = [0, 1, 2, 3] # 상하좌우
