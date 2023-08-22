@@ -159,12 +159,10 @@ class ArrowDisplayApp:
         self.dot_photo = ImageTk.PhotoImage(dot_image)
 
     def display_next_arrow(self):
-        # print(self.current_arrow_index)
         if self.current_arrow_index == 5:
             self.root.after(4000, self.display_none, 3000, 2)
             self.current_arrow_index = 0
             self.session += 1
-            # print(self.session)
             if self.session==6:
                 # saveJson(f"{self.currDir}/src/data/ohjihun/Track{self.trackIdx}_chair.json", list(self.signal_ls))
                 self.root.destroy()
@@ -196,7 +194,6 @@ class ArrowDisplayApp:
 
 
 if __name__ == "__main__":
-    # random_sequence()
     warnings.filterwarnings(action='ignore')
     currDir = os.getcwd()
     manager = mp.Manager()
