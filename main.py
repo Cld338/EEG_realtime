@@ -29,7 +29,6 @@ class MIClassifier():
                 for j in range(len(data[i][0])):
                     data_by_channel[j].append(data[i][0][j])
 
-        # print(data_by_channel)
         data_by_channel = np.array([np.array([np.array(j) for j in i]) for i in data_by_channel])
 
         data_by_channel = np.asarray([bandpass_filter(i, 300, 7, 30) for i in data_by_channel])
